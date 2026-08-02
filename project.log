@@ -146,3 +146,173 @@ Name: count, dtype: int64
 2026-08-02 13:48:27 | INFO | M05 | Analyst Note: Predicting 'sex' is challenging due to species-level sexual dimorphism overlap.
 2026-08-02 13:48:27 | INFO | M05 | Check feature importances to confirm whether size traits or species dummies drove predictions.
 2026-08-02 13:48:27 | INFO | M05 | ========================
+2026-08-02 14:01:12 | INFO | M05 | === RUN START ===
+2026-08-02 14:01:12 | INFO | M05 | project=M05
+2026-08-02 14:01:12 | INFO | M05 | repo_dir=ml-05-ensembles
+2026-08-02 14:01:12 | INFO | M05 | python=3.14.6
+2026-08-02 14:01:12 | INFO | M05 | os=Windows 11
+2026-08-02 14:01:12 | INFO | M05 | shell=powershell
+2026-08-02 14:01:12 | INFO | M05 | cwd=notebooks
+2026-08-02 14:01:12 | INFO | M05 | github_actions=False
+2026-08-02 14:01:12 | INFO | M05 | Confirming installation:
+2026-08-02 14:01:12 | INFO | M05 |   python:       3.14.6
+2026-08-02 14:01:12 | INFO | M05 |   pandas:       3.0.3
+2026-08-02 14:01:12 | INFO | M05 |   numpy:        2.5.0
+2026-08-02 14:01:12 | INFO | M05 |   scikit-learn: 1.9.0
+2026-08-02 14:01:12 | INFO | M05 |   seaborn:      0.13.2
+2026-08-02 14:01:12 | INFO | M05 |   matplotlib:   3.11.0
+2026-08-02 14:02:48 | INFO | M05 | === RUN START ===
+2026-08-02 14:02:48 | INFO | M05 | project=M05
+2026-08-02 14:02:48 | INFO | M05 | repo_dir=ml-05-ensembles
+2026-08-02 14:02:48 | INFO | M05 | python=3.14.6
+2026-08-02 14:02:48 | INFO | M05 | os=Windows 11
+2026-08-02 14:02:48 | INFO | M05 | shell=powershell
+2026-08-02 14:02:48 | INFO | M05 | cwd=notebooks
+2026-08-02 14:02:48 | INFO | M05 | github_actions=False
+2026-08-02 14:02:48 | INFO | M05 | Confirming installation:
+2026-08-02 14:02:48 | INFO | M05 |   python:       3.14.6
+2026-08-02 14:02:48 | INFO | M05 |   pandas:       3.0.3
+2026-08-02 14:02:48 | INFO | M05 |   numpy:        2.5.0
+2026-08-02 14:02:48 | INFO | M05 |   scikit-learn: 1.9.0
+2026-08-02 14:02:48 | INFO | M05 |   seaborn:      0.13.2
+2026-08-02 14:02:48 | INFO | M05 |   matplotlib:   3.11.0
+2026-08-02 14:11:52 | INFO | M05 | Using loaded inventory dataset: 73100 rows, 15 columns
+2026-08-02 14:12:15 | INFO | M05 | Using loaded inventory dataset: 73100 rows, 15 columns
+2026-08-02 14:12:15 | INFO | M05 | Original rows: 73100
+2026-08-02 14:12:15 | INFO | M05 | Model rows:    73100
+2026-08-02 14:12:15 | INFO | M05 | Classes in target 'Weather Condition': ['Cloudy', 'Rainy', 'Snowy', 'Sunny']
+2026-08-02 14:12:15 | DEBUG | M05 | Class counts:
+Weather Condition
+Sunny     18290
+Rainy     18278
+Snowy     18272
+Cloudy    18260
+Name: count, dtype: int64
+2026-08-02 14:13:12 | INFO | M05 | Train instances: 58480
+2026-08-02 14:13:12 | INFO | M05 | Test instances: 14620
+2026-08-02 14:13:53 | INFO | M05 | Fitting single tree + two ensembles
+2026-08-02 14:15:05 | INFO | M05 | Using loaded inventory dataset: 73100 rows, 15 columns
+2026-08-02 14:15:05 | INFO | M05 | Original rows: 73100
+2026-08-02 14:15:05 | INFO | M05 | Model rows:    73100
+2026-08-02 14:15:05 | INFO | M05 | Classes in target 'Weather Condition': ['Cloudy', 'Rainy', 'Snowy', 'Sunny']
+2026-08-02 14:15:05 | DEBUG | M05 | Class counts:
+Weather Condition
+Sunny     18290
+Rainy     18278
+Snowy     18272
+Cloudy    18260
+Name: count, dtype: int64
+2026-08-02 14:15:07 | INFO | M05 | Train instances: 58480
+2026-08-02 14:15:07 | INFO | M05 | Test instances: 14620
+2026-08-02 14:15:09 | INFO | M05 | Fitting single tree + two ensembles
+2026-08-02 14:16:17 | INFO | M05 | Using loaded inventory dataset: 73100 rows, 15 columns
+2026-08-02 14:16:17 | INFO | M05 | Original rows: 73100
+2026-08-02 14:16:17 | INFO | M05 | Model rows:    73100
+2026-08-02 14:16:17 | INFO | M05 | Classes in target 'Weather Condition': ['Cloudy', 'Rainy', 'Snowy', 'Sunny']
+2026-08-02 14:16:17 | DEBUG | M05 | Class counts:
+Weather Condition
+Sunny     18290
+Rainy     18278
+Snowy     18272
+Cloudy    18260
+Name: count, dtype: int64
+2026-08-02 14:16:19 | INFO | M05 | Train instances: 58480
+2026-08-02 14:16:19 | INFO | M05 | Test instances: 14620
+2026-08-02 14:16:21 | INFO | M05 | Fitting single tree + two ensembles
+2026-08-02 14:16:21 | DEBUG | M05 |    fitted: single_tree
+2026-08-02 14:16:30 | DEBUG | M05 |    fitted: random_forest
+2026-08-02 14:17:06 | INFO | M05 | Using loaded inventory dataset: 73100 rows, 15 columns
+2026-08-02 14:17:06 | INFO | M05 | Original rows: 73100
+2026-08-02 14:17:06 | INFO | M05 | Model rows:    73100
+2026-08-02 14:17:06 | INFO | M05 | Features count: 18
+2026-08-02 14:17:06 | INFO | M05 | Classes in target 'Weather Condition': ['Cloudy', 'Rainy', 'Snowy', 'Sunny']
+2026-08-02 14:17:06 | DEBUG | M05 | Class counts:
+Weather Condition
+Sunny     18290
+Rainy     18278
+Snowy     18272
+Cloudy    18260
+Name: count, dtype: int64
+2026-08-02 14:17:09 | INFO | M05 | Train instances: 58480
+2026-08-02 14:17:09 | INFO | M05 | Test instances: 14620
+2026-08-02 14:17:11 | INFO | M05 | Fitting single tree + two ensembles
+2026-08-02 14:17:11 | DEBUG | M05 |    fitted: single_tree
+2026-08-02 14:17:21 | DEBUG | M05 |    fitted: random_forest
+2026-08-02 14:17:51 | DEBUG | M05 |    fitted: gradient_boosting
+2026-08-02 14:18:29 | INFO | M05 |   single_tree        | Acc: 0.253 | AUC: 0.503 | F1: 0.193
+2026-08-02 14:18:29 | INFO | M05 |   random_forest      | Acc: 0.250 | AUC: 0.498 | F1: 0.250
+2026-08-02 14:18:29 | INFO | M05 |   gradient_boosting  | Acc: 0.245 | AUC: 0.498 | F1: 0.245
+2026-08-02 14:18:30 | INFO | M05 | Best model: single_tree with ROC-AUC = 0.503
+2026-08-02 14:22:53 | INFO | M05 | Preparing data with TARGET = 'Category'
+2026-08-02 14:22:53 | INFO | M05 | Target classes in 'Category': ['Clothing', 'Electronics', 'Furniture', 'Groceries', 'Toys']
+2026-08-02 14:22:53 | INFO | M05 | Total features after encoding: 17
+2026-08-02 14:22:53 | INFO | M05 | Train samples: 58480 | Test samples: 14620
+2026-08-02 14:22:53 | INFO | M05 | Fitting Decision Tree, Random Forest, and Gradient Boosting...
+2026-08-02 14:24:38 | INFO | M05 | Preparing data with TARGET = 'Units Sold'
+2026-08-02 14:24:38 | INFO | M05 | Target variable: 'Units Sold' (Min: 0, Max: 499)
+2026-08-02 14:24:38 | INFO | M05 | Total features after encoding: 20
+2026-08-02 14:24:38 | INFO | M05 | Train samples: 58480 | Test samples: 14620
+2026-08-02 14:24:38 | INFO | M05 | Fitting Decision Tree, Random Forest, and Gradient Boosting Regressors...
+2026-08-02 14:27:05 | INFO | M05 | Random forest feature importances (high to low):
+2026-08-02 14:27:05 | INFO | M05 |    Demand Forecast           0.999
+2026-08-02 14:27:05 | INFO | M05 |    Inventory Level           0.000
+2026-08-02 14:27:05 | INFO | M05 |    Units Ordered             0.000
+2026-08-02 14:27:05 | INFO | M05 |    Price                     0.000
+2026-08-02 14:27:05 | INFO | M05 |    Competitor Pricing        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Discount                  0.000
+2026-08-02 14:27:05 | INFO | M05 |    Holiday/Promotion         0.000
+2026-08-02 14:27:05 | INFO | M05 |    Weather Condition_Snowy   0.000
+2026-08-02 14:27:05 | INFO | M05 |    Category_Electronics      0.000
+2026-08-02 14:27:05 | INFO | M05 |    Seasonality_Winter        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Seasonality_Summer        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Category_Furniture        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Weather Condition_Sunny   0.000
+2026-08-02 14:27:05 | INFO | M05 |    Seasonality_Spring        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Weather Condition_Rainy   0.000
+2026-08-02 14:27:05 | INFO | M05 |    Region_West               0.000
+2026-08-02 14:27:05 | INFO | M05 |    Category_Groceries        0.000
+2026-08-02 14:27:05 | INFO | M05 |    Region_North              0.000
+2026-08-02 14:27:05 | INFO | M05 |    Category_Toys             0.000
+2026-08-02 14:27:05 | INFO | M05 |    Region_South              0.000
+2026-08-02 14:27:28 | INFO | M05 | Random forest feature importances (high to low):
+2026-08-02 14:27:28 | INFO | M05 |    Demand Forecast           0.999
+2026-08-02 14:27:28 | INFO | M05 |    Inventory Level           0.000
+2026-08-02 14:27:28 | INFO | M05 |    Units Ordered             0.000
+2026-08-02 14:27:28 | INFO | M05 |    Price                     0.000
+2026-08-02 14:27:28 | INFO | M05 |    Competitor Pricing        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Discount                  0.000
+2026-08-02 14:27:28 | INFO | M05 |    Holiday/Promotion         0.000
+2026-08-02 14:27:28 | INFO | M05 |    Weather Condition_Snowy   0.000
+2026-08-02 14:27:28 | INFO | M05 |    Category_Electronics      0.000
+2026-08-02 14:27:28 | INFO | M05 |    Seasonality_Winter        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Seasonality_Summer        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Category_Furniture        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Weather Condition_Sunny   0.000
+2026-08-02 14:27:28 | INFO | M05 |    Seasonality_Spring        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Weather Condition_Rainy   0.000
+2026-08-02 14:27:28 | INFO | M05 |    Region_West               0.000
+2026-08-02 14:27:28 | INFO | M05 |    Category_Groceries        0.000
+2026-08-02 14:27:28 | INFO | M05 |    Region_North              0.000
+2026-08-02 14:27:28 | INFO | M05 |    Category_Toys             0.000
+2026-08-02 14:27:28 | INFO | M05 |    Region_South              0.000
+2026-08-02 14:28:10 | INFO | M05 | Random forest feature importances for Weather Condition (high to low):
+2026-08-02 14:28:10 | INFO | M05 |    Demand Forecast                0.9993
+2026-08-02 14:28:10 | INFO | M05 |    Inventory Level                0.0003
+2026-08-02 14:28:10 | INFO | M05 |    Units Ordered                  0.0001
+2026-08-02 14:28:10 | INFO | M05 |    Price                          0.0001
+2026-08-02 14:28:10 | INFO | M05 |    Competitor Pricing             0.0001
+2026-08-02 14:28:10 | INFO | M05 |    Discount                       0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Holiday/Promotion              0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Weather Condition_Snowy        0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Category_Electronics           0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Seasonality_Winter             0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Seasonality_Summer             0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Category_Furniture             0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Weather Condition_Sunny        0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Seasonality_Spring             0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Weather Condition_Rainy        0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Region_West                    0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Category_Groceries             0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Region_North                   0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Category_Toys                  0.0000
+2026-08-02 14:28:10 | INFO | M05 |    Region_South                   0.0000
