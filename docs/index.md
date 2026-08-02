@@ -26,80 +26,71 @@ Describe your small technical modification to the example project.
 Include:
 
 - What you changed
+  Small change was made to target sex - a bianry classification
 - Why you chose that change
+  Well it was actually suggested so that is why I did it
 - How you verified that it worked
+  Yes, it did in fact work
 - What result, output, chart, metric, or behavior confirmed the change
+There were a few different graphs and measures but the ROC-AUC and  F1 tell the story mostly
 
 Compared with the example project,
 explain what is different and why the change matters.
 
+Well this is a binary classification which is what random forests are for so that is why we did that change, the other variables were continuous except the island I suppose
+
 Was it easy, or surprisingly challenging and why do you think so?
+
+Well I suppose theoretically I understand it in an abstract way but obviously I cognitively offloaded a bit too much to Gemini when it came to actually producing the code
 
 ## Phase 5. Custom Project
 
-Describe your custom project and how you made your modeling decisions.
-
-Be specific about what changed from the example project.
+For the custom project I continued to use the random forest and ensemble models along with the example code but used it on my Kaggle data set. I targeted weather condition because I thought it would be funny ot try and predict weather condition without using any  other major identifier like Seasonality or Region since I figured it might give it away but then I just discovered that it used Demand Forecast and well while that could be the algoirthm the ROC-AUC was also 0.503 so basically I am flipping a coin. I have no real idea if weather was predicted using the Demand Forecast OR I am missing the actual predicitve features but they would basically give it away so I said no thanks that is no fun! So I guess I learned something about interpretation and synthetic datasets and how to read or interpret ROC-AUC a little better.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+Dataset: Retail Store Inventory Forecasting Dataset.
 
-Include:
+Source: Kaggle (synthetic retail operations dataset).
 
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+Selection Rationale: Chosen to evaluate how store inventory levels, sales, pricing, and promotional data interact with external environmental categories.
+
+Limitations: Being a synthetic dataset, column relationships are synthetically generated, which led to specific data leakage nuances discovered during modeling.
 
 ### Modeling Approach
 
-Describe the problem type and modeling approach for this project.
+Task Type: Supervised Multi-Class Classification.
 
-Include:
+Why Supervised: The dataset contains labeled ground-truth outcomes for the target variable.
 
-- Is this supervised or unsupervised and how do you know
-- Is this classification, regression, clustering, recommendation, forecasting, or another type of ML task
-- What kind of target works well for this approach
-- Why your selected model or method is appropriate
+Model Choices:
+
+Baseline: Single Decision Tree (max_depth=5)
+
+Bagging Ensemble: Random Forest (n_estimators=200, max_depth=10)
+
+Boosting Ensemble: Gradient Boosting (n_estimators=100, learning_rate=0.05)
 
 ### Target
 
-Describe the example target variable.
-
-Then describe your chosen target variable.
-
-Explain how your target choice changes the modeling approach, interpretation, or evaluation.
+Example Target: Binary classification target (e.g., Sex).Custom Target: Multi-class target Weather Condition (Sunny, Rainy, Snowy, etc.).Impact of Change: Required switching from binary log-loss to multi-class evaluation methods and expanding probability matrices across $N$ target classes.
 
 ### Features
 
-Describe the example features.
+Predictor Features Used: Inventory Level, Units Sold, Units Ordered, Demand Forecast, Price, Discount, Holiday/Promotion, Competitor Pricing, plus dummy variables for Category, Region, and Seasonality.
 
-Then describe the features you used to predict your target.
-
-Explain what you changed, added, removed, or kept and why.
+Removals: Excluded Product ID and Store ID to avoid high-cardinality overfitting.
 
 ### Evaluation and Results
 
-Describe how you evaluated your model.
+Primary Metrics: Accuracy, Macro F1-Score, and Multi-Class ROC-AUC (OVR).
 
-Include:
+Feature Importance Discovery: During Random Forest evaluation in Section 6, Demand Forecast dominated with a Gini importance score of ~0.9993.
 
-- The metric or evidence you used
-- The main result
-- Whether the result was useful, interesting, surprising, or disappointing
-- Any weakness, limitation, or next improvement
+Key Finding (Target Leakage): This near-perfect importance revealed target leakage. In the synthetic dataset generation script, Demand Forecast was calculated directly using Weather Condition. Reversing the relationship allowed the ensemble trees to trivialise the task by decoding Demand Forecast. Just to clarify it is possible we also just chose poor feature selection and it simply is similar to a coin flip
 
 ### Summary
 
 Summarize your custom project.
 
-Include:
-
-- How you implemented your custom model
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
-
-Display at least one image or screenshot showing your work.
+I thought it would be funny to try to predict a non prediction feature in a synthetic dataset but I was wrong.
